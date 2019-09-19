@@ -24,11 +24,11 @@ This is a topology analysis package[Original Author: Xing-Yu Zhou]
 
 > NOTE: ***The environment variable is aimed at bash shell mode, if your shell mode is tcshell, use [XXXX XX]bash command to change to bash shell mode, when all the things have been done, use XXXX:XX$exit to come back to tcshell.***
 
-> source setup.sh, after the first compilation, use bahs to change shell mode and then source setup.sh, if you want to apply topology analysis.
+> source setup.sh, after the first compilation, use [XXXX XX]bash to change shell mode and then source setup.sh, if you want to apply topology analysis.
 
 ## Execute
 
-> After setup your own environment variable, you can apply topology analysi in anywhere you want, use this command: topoana.exe [your-topoana,card]
+> After setup your own environment variable, you can apply topology analysi in anywhere you want, use this command: topoana.exe [your-topoana.card]
 
 ## Explanations about parameters in share/topoana.card
 
@@ -42,39 +42,39 @@ This is a topology analysis package[Original Author: Xing-Yu Zhou]
 
 > Maximum hierarchy of heading decay branches to be processed in each event: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-> Ignore the decay of the following particles: e.g., e+e- --> D+D-pi+pi-, D- in this part means you do not care about decay method of D-, other particles can be found in share/pid_3pchrg_txtpnm_texpnm_iccp.dat
+> Ignore the decay of the following particles: e.g., e+e- --> D+D-pi+pi-, D- in this part means you do not care about decay method of D-(D- is shown as D- in the final pdf file). Other particles' names can be found in share/pid_3pchrg_txtpnm_texpnm_iccp.dat
 
-> Ignore the decay of the daughters of the following particles: e.g., e+e- --> D+D-pi+pi-, D+ in thie part means that you only care about only the first level of decay, e.g. D+ --> K-pi+pi+
+> Ignore the decay of the daughters of the following particles: e.g., e+e- --> D+D-pi+pi-, D+ in thie part means that you only care about only the first level of decay, e.g. D+ --> K-pi+pi+, K-, pi+, pi- is the final states in your final pdf file the same for other decay channls of D+
 
-> Component analysis --- decay trees: Y stands for iluminations for initial and final states with all resonances, N stands for iluminations only for inital and final states without resonances
+> Component analysis --- decay trees: Y stands for iluminations for initial and final states with intermediate resonances, N stands for iluminations only for inital and final states without intermediate resonances
 
 > Component analysis --- decay initial-final states: XXXXXXXXXXXXXXXXXXXXXXXXXX
 
-> Component analysis --- decay branches of particles: XXXXXXXXXXXXXXXXXXXXXXXXX
+> Component analysis --- decay branches of particles: Only save the assigned particles' decay, examples can be seen in examples/example-7.card
 
-> Component analysis --- production branches of particles: XXXXXXXXXXXXXXXXXXXXXXXX
+> Component analysis --- production branches of particles: only save production particles decay channels, e.g. e+e- --> final states, if you use vgam9, this means only e+e- --> vgam9 + X --> final states will be saved, examples can be seen in examples/example-8.card
 
-> Component analysis --- inclusive decay branches: define the inclusive channel you want to display, shown in all info part, examples can be seen in examples/example-2.card, example-3.card, exampl-6.card
+> Component analysis --- inclusive decay branches: define the inclusive channel you want to display which will be shown in the pdf file, examples can be seen in examples/example-2.card, example-3.card, exampl-6.card
 
-> Component analysis --- intermediate-resonance-allowed decay branches: XXXXXXXXXXXXXXXXXXXXXXX
+> Component analysis --- intermediate-resonance-allowed decay branches: similar to [decay branches of particles] part
 
-> Signal identification --- decay trees: your signal channel, but are the explicit channel you want to show in the signal info part, examples can be seen in example-4
+> Signal identification --- decay trees: your signal channel, but are the explicit channel you want to show in the pdf file, examples can be seen in example-4
 
 > Signal identification --- decay initial-final states: XXXXXXXXXXXXXXXXXXXXXXX
 
 > Signal identification --- particles: XXXXXXXXXXXXXXXXXXXX
 
-> Signal identification --- decay branches: XXXXXXXXXXXXXXXXXXXXX
+> Signal identification --- decay branches: XXXXXXXXXXXXX
 
 > Signal identification --- inclusive decay branches: XXXXXXXXXXXXexample-5.card
 
-> Signal identification --- cascade decay branches: your signal channel, examples can be seen in examples/exampl-1.card, shown in the signal info part
+> Signal identification --- cascade decay branches: your signal channel, examples can be seen in examples/exampl-1.card, shown in the final pdf file
 
-> Signal identification --- inclusive cascade decay branches: XXXXXXXXXXXXXXXXXXXXXXX
+> Signal identification --- inclusive cascade decay branches: similar to [inclusive decay branches] part
 
-> Signal identification --- intermediate-resonance-allowed decay branches: XXXXXXXXXXXXXXXXXXX
+> Signal identification --- intermediate-resonance-allowed decay branches: similar to [decay branches of particles] part
 
-> Signal identification --- inclusive or intermediate-resonance-allowed cascade decay branches: XXXXXXXXXXXXXXXXXXX
+> Signal identification --- inclusive or intermediate-resonance-allowed cascade decay branches: similar to [inclusive decay branches] part
 
 > Analysis tasks for signal identifications (Three options: TC, T and C. Default: TC): TC, XXXXXXXXX, T, XXXXXXXX, C, XXXXXXX
 
