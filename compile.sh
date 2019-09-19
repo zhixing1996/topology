@@ -24,4 +24,3 @@ g++ -g -Wall ${ROOTCFLAGS} ${ROOTLDFLAGS} -lTreePlayer -o ${exefile} ${cxxfile}
 else
 g++ -g -Wall -std=c++0x ${ROOTCFLAGS} ${ROOTLDFLAGS} -lTreePlayer -o ${exefile} ${cxxfile}
 fi
-bash
