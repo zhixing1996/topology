@@ -4,9 +4,9 @@ This is a topology analysis package[Original Author: Xing-Yu Zhou]
 
 ## Pre requirement
 
-> Use lxslc7 to login
+> Use lxslc7 to login LS5
 
-> Set up BOSS-7.0.3 environment
+> Set up BOSS-X.X.X environment to use ROOT
 
 ## Install v1.9.5
 
@@ -42,7 +42,7 @@ This is a topology analysis package[Original Author: Xing-Yu Zhou]
 
 > Maximum hierarchy of heading decay branches to be processed in each event: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-> Ignore the decay of the following particles: e.g., e+e- --> D+D-pi+pi-, D- in this part means you don't care about decay method of D-, other particles can be found in share/pid_3pchrg_txtpnm_texpnm_iccp.dat
+> Ignore the decay of the following particles: e.g., e+e- --> D+D-pi+pi-, D- in this part means you do not care about decay method of D-, other particles can be found in share/pid_3pchrg_txtpnm_texpnm_iccp.dat
 
 > Ignore the decay of the daughters of the following particles: e.g., e+e- --> D+D-pi+pi-, D+ in thie part means that you only care about only the first level of decay, e.g. D+ --> K-pi+pi+
 
