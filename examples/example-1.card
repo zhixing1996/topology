@@ -45,9 +45,11 @@
 
 % Signal identification --- cascade decay branches
 {
-  0 	& 	e+e- --> pi+ pi- D+ D- 	        & -1 # in this line, 0 is its iindex, -1 means this a mother decay chain
-  1	&	D+ --> K+ pi+ pi-		&  0 # in this line, 1 is its index, 0 means its decay belongs to index 0 channel(in this place, the upper line)
+  0 	& 	e+e- --> pi+ pi- D+ D- 	        & -1 
+  1	&	D+ --> K+ pi+ pi-		&  0 
 }
+# in the first line, 0 is its iindex, -1 means this a mother decay chain
+# in the second line, 1 is its index, 0 means its decay belongs to index 0 channel(in this place, the upper line
 
 # Four files with the same name but in different (root/txt/tex/pdf) formats will be outputed. The filename extensions are appended automatically by the program as suffixes. Thus, to avoid repetition, any filename extension is not recommended to be used in the name as a suffix.
 % Main name of output files (Default: Main name of the card file) 
