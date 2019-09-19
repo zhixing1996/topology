@@ -1,0 +1,76 @@
+# In the card, "#", "%", and the pair of "{" and "}" are used for commenting, prompting, and grouping, respectively.
+
+# The following two items are indispensable. They can't be removed or left empty.
+
+# One file per line without tailing characters, such as comma, semicolon, and period. In addition, wildcards "[]?*" are supported in the item just like in the method Add() of the class TChain. Besides, both the absolute and relative paths are supported in the item.
+% Names of input root files
+{
+  /scratchfs/bes/hantz/GGPipijpsi/4180Inclusive/RReasonce/4180inclusive.root
+}
+
+% Tree name
+{
+  vxyz 
+}
+
+# The following thirty-two items are optional. They can be removed or left empty.
+
+# Here, AI, VI, MIV, and MDV are short for array of integers, vector of integers, multiple integer variables, and multiple double variables.
+% Storage type of the raw input topology data (Four options: AI, VI, MIV, and MDV. Default: AI)
+{
+  AI
+}
+
+% Branch name of the number of particles (Default: nMCGen)
+{
+  nTrackMC
+}
+
+% Branch name of the PDG codes of particles (Default: MCGenPDG)
+{
+  trackIDMC
+}
+
+% Branch name of the mother indeces of particles (Default: MCGenMothIndex)
+{
+  trackIndexMC
+}
+
+% Component analysis --- decay trees
+{
+  Y
+}
+
+% Main name of output files (Default: Main name of the card file)
+{
+  example-6
+}
+
+% Component analysis --- inclusive decay branches
+{
+  vgam8 --> eta J/psi
+  e+ e- --> gamma psi(2S)
+}
+  
+# This item is used for the analysis of the decay branches of the following particles. The maximum numbers of decay branches to be printed for the particles can be optionally specified on their right sides.
+% Component analysis --- decay branches of particles
+{
+  J/psi
+  eta
+  psi(2S)
+}
+
+% Signal identification --- cascade decay branches
+{
+  0 & e+ e- --> eta J/psi & -1
+  1 & eta --> pi+ pi- pi0 & 0
+
+  0 & e+ e- --> gamma psi(2S) & -1
+  1 & psi(2S) --> pi+ pi- J/psi & 0
+}
+
+% Cut to select entries
+{
+  x3872_1c>3.8&&x3872_1c<3.9&&chisq1c<10&&costheta_recoil>0.8
+}
+

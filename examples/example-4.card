@@ -1,0 +1,73 @@
+# In the card, "#", "%" and the pair of "{" and "}" are used for commenting, prompting and grouping, respectively.
+
+# The following six items are indispensable, and they can't be removed or left empty.
+
+# One file per line without tailing characters, such as comma, semicolon and period. In addition, wildcards "[]?*" are supported in the item just like in the method Add() of the class TChain. Besides, both the absolute and relative paths are supported in the item.
+% Names of input root files
+{
+  /besfs/users/zhouxy/workarea/workarea-6.6.5/Analysis/Physics/MctruthForTopoAnaAlg/MctruthForTopoAnaAlg-00-00-02/test/for_longzhou/had.root
+}
+
+% Tree name
+{
+  MctruthForTopoAna
+}
+
+% Branch name of the number of particles (Default: nMCGen)
+{
+  Nmcps
+}
+
+% Branch name of the PDG codes of particles (Default: MCGenPDG)
+{
+  Pid 
+}
+
+% Branch name of the mother indeces of particles (Default: MCGenMothIndex)
+{
+  Midx
+}
+
+% Component analysis --- decay trees 
+{
+  Y
+}
+
+% Signal identification --- decay trees
+{
+  0 	& e+ e- --> psi(4160) gammaI	& 	-1
+  1 	& psi(4160) --> X(3872) gamma	&	0
+  2 	& X(3872) --> pi+ pi- J/psi	&	1
+  3 	& J/psi --> mu+ mu-		&	2
+
+  0     & e+ e- --> psi(4160) gammaI    &       -1
+  1     & psi(4160) --> X(3872) gamma   &       0
+  2     & X(3872) --> pi+ pi- J/psi     &       1
+  3     & J/psi --> e+ e-	        &       2
+
+  0     & e+ e- --> psi(4160) gammaI    &       -1
+  1     & psi(4160) --> X(3872) gamma   &       0
+  2     & X(3872) --> pi+ pi- J/psi     &       1
+  3     & J/psi --> e+ e- gammaf        &       2
+
+  0     & e+ e- --> psi(4160) gammaI    &       -1
+  1     & psi(4160) --> X(3872) gamma   &       0
+  2     & X(3872) --> pi+ pi- J/psi     &       1
+  3     & J/psi --> mu+ mu- gammaf        &       2
+
+  0     & e+ e- --> psi(4160) gammaI    &       -1
+  1     & psi(4160) --> X(3872) gamma   &       0
+  2     & X(3872) --> pi+ pi- J/psi     &       1
+  3     & J/psi --> e+ e- gammaf gammaf &       2
+
+  0     & e+ e- --> psi(4160) gammaI    &       -1
+  1     & psi(4160) --> X(3872) gamma   &       0
+  2     & X(3872) --> pi+ pi- J/psi     &       1
+  3     & J/psi --> mu+ mu- gammaf gammaf &       2
+}
+
+# Four files with the same name but in different (root/txt/tex/pdf) formats will be outputed. The filename extensions are appended automatically by the program as suffixes. Thus, to avoid repetition, any filename extension is not recommended to be used in the name as a suffix.
+% Main name of output files (Default: Main name of the card file) 
+{  
+  example-4
+}
