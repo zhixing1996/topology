@@ -26,6 +26,8 @@ This is a topology analysis package[Original Author: Xing-Yu Zhou]
 
 > source setup.sh, after the first compilation, use [XXXX XX]bash to change shell mode and then source setup.sh, if you want to apply topology analysis.
 
+> You can also add [setenv PATH $pkgPath/bin:$PATH] command in your ~/.tcshrc file, if your bash mode is tcshell.
+
 ## Execute
 
 > After setup your own environment variable, you can apply topology analysi in anywhere you want, use this command: topoana.exe [your-topoana.card]
